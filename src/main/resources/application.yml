@@ -1,0 +1,14 @@
+eureka:
+  client:
+    register-with-eureka: true
+    fetchRegistry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}  # Unique instance ID for this service
+
+
+
+spring.application.name: demo
+server.port: 8085
